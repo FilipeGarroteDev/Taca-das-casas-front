@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Taís de Paiva",
+    "email": "taisdepaiva@gmail.com",
+    "password": "123456",
+    "house": "Capivara",
+    "department": "Estratégia"
+  },
+  {
+    "id": 2,
+    "name": "Filipe Garrote",
+    "email": "filipe.garrote@gmail.com",
+    "password": "123456",
+    "house": "Sucuri",
+    "department": "Agregado"
+  }
+]
