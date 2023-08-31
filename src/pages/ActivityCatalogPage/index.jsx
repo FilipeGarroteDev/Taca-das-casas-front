@@ -1,7 +1,7 @@
 import CreaStripePattern from '../../components/CreaStripePattern';
 import styled from 'styled-components';
 import GreetingsHeader from '../../components/GreetingsHeader';
-import ActivitiesMenu from './ActivitiesMenu';
+import ActivitiesMenu from '../../components/ActivitiesMenu';
 import { useState } from 'react';
 import ActivitiesContainer from './ActivitiesContainer';
 

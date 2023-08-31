@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import styled from 'styled-components';
 
-export default function ActivitiesMenu({setSelectedActivityGroup}) {
+export default function ActivitiesMenu({setSelectedActivityGroup, page}) {
 
   return (
-    <MenuContainer>
+    <MenuContainer page={page}>
       <div onClick={() => setSelectedActivityGroup("Presença")}>Presença</div>
       <div onClick={() => setSelectedActivityGroup("Engajamento")}>Engajamento</div>
       <div onClick={() => setSelectedActivityGroup("Divulgação")}>Divulgação</div>
@@ -18,7 +18,7 @@ const MenuContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: ${props => props.page === "register" ? "0" : "20px"};
   align-items: center;
 
     >div {
@@ -27,7 +27,7 @@ const MenuContainer = styled.nav`
       height: 40px;
       border-radius: 10px;
       box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.5);
-      background-color: #ffe6e6;
+      background-color: ${props => props.page === "register" ? "#cee9f8" : "#ffe6e6"};
       display: flex;
       justify-content: center;
       align-items: center;

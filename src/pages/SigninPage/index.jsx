@@ -8,29 +8,11 @@ import { toast } from 'react-toastify';
 import CreaStripePattern from '../../components/CreaStripePattern';
 import logo from "../../assets/logoCrea.jpeg"
 import { useNavigate } from 'react-router';
+import { users } from '../../../mock';
 
 export default function SigninPage() {
   const [signInData, setSignInData] = useState({});
   const navigate = useNavigate()
-
-  const users = [
-    {
-      id: 1,
-      name: "Taís de Paiva",
-      email: "taisdepaiva@gmail.com",
-      password: "123456",
-      house: "Capivara",
-      department: "Estratégia"
-    },
-    {
-      id: 2,
-      name: "Filipe Garrote",
-      email: "filipe.garrote@gmail.com",
-      password: "123456",
-      house: "Sucuri",
-      department: "Agregado"
-    }
-  ]
 
   function handleInput(e) {
     setSignInData({

@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import ActivityCatalogPage from './pages/ActivityCatalogPage'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/signin" element={<SigninPage />} />
             <Route path="/" element={<MainPage />} />
             <Route path="/activities" element={<ActivityCatalogPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </BrowserRouter>
     </>
