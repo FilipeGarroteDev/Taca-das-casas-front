@@ -6,6 +6,7 @@ import { useState } from 'react';
 import DateInputComponent from './DateInputComponent';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import dayjs from "dayjs"
 
 
 export default function OptionsContainer() {
@@ -23,10 +24,13 @@ export default function OptionsContainer() {
 
   function sendActivity() {
     userActivities.push({
+      id: (Math.random()*100000).toFixed(0),
       userId: user.id,
       username: user.name,
       activity: activityData.activity.split(" = ")[0],
       pts: Number(activityData.activity.split(" = ")[1].split(" ")[0]),
+      status: "pending",
+      created_at: dayjs().format("DD/MM/YYYY")
     })
     toast.success("Sua atividade foi registrada com sucesso! :)")
     navigate("/")

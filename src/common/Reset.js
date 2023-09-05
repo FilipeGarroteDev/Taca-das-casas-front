@@ -49,4 +49,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*{
+	&::-webkit-scrollbar-track {
+		width: 0px;
+		background: transparent;        /* color of the tracking area */
+}
+
+	&::-webkit-scrollbar-thumb {
+  	background-color: rgba(0, 0, 0, 0.4);    /* color of the scroll thumb */
+  	border-radius: 20px;       /* roundness of the scroll thumb */
+  	border: 3px solid transparent;  /* creates padding around scroll thumb */
+	}
+}
 `;
