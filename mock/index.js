@@ -37,7 +37,8 @@ const users = [
     email: "taisdepaiva@gmail.com",
     password: "123456",
     house: "Capivara",
-    department: "Estratégia"
+    department: "Estratégia",
+    role: "volunteer"
   },
   {
     id: 2,
@@ -45,7 +46,35 @@ const users = [
     email: "filipe.garrote@gmail.com",
     password: "123456",
     house: "Sucuri",
-    department: "Agregado"
+    department: "Agregado",
+    role: "volunteer"
+  },
+  {
+    id: 3,
+    name: "Carlos Rodrigo",
+    email: "carlos@carlos.com",
+    password: "123456",
+    house: "Onça-Pintada",
+    department: "Agregado",
+    role: "volunteer"
+  },
+  {
+    id: 4,
+    name: "Jorge Figueira",
+    email: "jorge@jorge.com",
+    password: "123456",
+    house: "Arara-Azul",
+    department: "Agregado",
+    role: "volunteer"
+  },
+  {
+    id: 4,
+    name: "Ademir da Silva",
+    email: "admin@admin.com",
+    password: "123456",
+    house: "Arara-Azul",
+    department: "Agregado",
+    role: "admin"
   }
 ]
 

@@ -1,29 +1,15 @@
 import CreaStripePattern from '../../components/CreaStripePattern';
 import styled from 'styled-components';
 import GreetingsHeader from '../../components/GreetingsHeader';
-import { Pagination } from "@mui/material"
-import { userActivities } from '../../../mock';
-import EmptyPage from '../../components/EmptyPage';
-import ScoreContainer from './ScoreContainer';
+import RankingContainer from './RankingContainer';
 
 export default function RankingPage() {
 
 	return (
 		<MainWrapper>
 			<GreetingsHeader />
-			<h1>Quadro de Pontos</h1>
-			
-			{userActivities.length === 0 ? 
-				<EmptyPage message="Você ainda não possui atividades registradas. Corre lá na seção de registro e ajude sua Casa!! :)" /> 
-				: 
-				<>
-					<ScoreContainer activities={userActivities}/>
-					<Pagination count={10} variant="outlined" color="secondary" />
-				</>
-				
-			}
-
-			
+			<h1>Segue o Líder</h1>
+			<RankingContainer />
 			<CreaStripePattern position="footer" />
 		</MainWrapper>
 	);
@@ -50,7 +36,7 @@ const MainWrapper = styled.main`
 	>h1 {
 		color: #000;
     font-family: 'Amatic SC', cursive;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 700;
     line-break: auto;
     text-align: center;

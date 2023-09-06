@@ -11,19 +11,15 @@ export default function HistoryPage() {
 	return (
 		<MainWrapper>
 			<GreetingsHeader />
-			<h1>Quadro de Pontos</h1>
-			
+			<h1>Quadro de Pontos</h1>		
 			{userActivities.length === 0 ? 
 				<EmptyPage message="Você ainda não possui atividades registradas. Corre lá na seção de registro e ajude sua Casa!! :)" /> 
 				: 
 				<>
 					<ScoreContainer activities={userActivities}/>
 					<Pagination count={10} variant="outlined" color="secondary" />
-				</>
-				
+				</>		
 			}
-
-			
 			<CreaStripePattern position="footer" />
 		</MainWrapper>
 	);
@@ -32,7 +28,7 @@ export default function HistoryPage() {
 const MainWrapper = styled.main`
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(to bottom, #d9fffb, #53938d, #ffffff);
+	background: linear-gradient(to bottom, #f8e6eb, #EB5B80, #ffffff);
 	display: flex;
 	flex-direction: column;
 	align-items: center;

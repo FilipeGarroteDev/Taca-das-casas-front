@@ -17,12 +17,12 @@ const Container = styled.nav`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  border: 1px solid #4e4b4b;
+  border: 1px solid #443e3e;
   padding: 10px;
   border-radius: 20px;
 
     >span {
-      color: #4e4b4b;
+      color: #443e3e;
 	    font-family: 'Amatic SC', cursive;
 	    font-size: 35px;
 	    font-weight: 700;
