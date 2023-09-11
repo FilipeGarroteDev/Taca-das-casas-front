@@ -1,9 +1,9 @@
-import CreaStripePattern from '../../components/CreaStripePattern';
+import CreaStripePattern from '../../../components/CreaStripePattern';
 import styled from 'styled-components';
-import GreetingsHeader from '../../components/GreetingsHeader';
+import GreetingsHeader from '../../../components/GreetingsHeader';
 import OptionsContainer from './OptionsContainer';
 
-export default function RegisterPage() {
+export default function AdminRegisterPage() {
 
 
   return (

@@ -27,7 +27,7 @@ const MenuContainer = styled.nav`
       height: 40px;
       border-radius: 10px;
       box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.5);
-      background-color: ${props => props.page === "register" ? "#cee9f8" : "#ffe6e6"};
+      background-color: ${props => props.page === "register" ? "#fcc0cf" : "#ffe6e6"};
       display: flex;
       justify-content: center;
       align-items: center;

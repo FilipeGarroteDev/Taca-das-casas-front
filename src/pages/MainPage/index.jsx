@@ -48,6 +48,7 @@ const MainWrapper = styled.main`
     width: 50%;
     height: 30%;
     margin-bottom: 30px;
+    filter: drop-shadow(2px 2px 20px #000)
   }
 
   >section {

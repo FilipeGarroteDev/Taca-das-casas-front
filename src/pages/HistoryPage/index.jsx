@@ -13,7 +13,7 @@ export default function HistoryPage() {
 			<GreetingsHeader />
 			<h1>Quadro de Pontos</h1>		
 			{userActivities.length === 0 ? 
-				<EmptyPage message="Você ainda não possui atividades registradas. Corre lá na seção de registro e ajude sua Casa!! :)" /> 
+				<EmptyPage border message="Você ainda não possui atividades registradas. Corre lá na seção de registro e ajude sua Casa!! :)" /> 
 				: 
 				<>
 					<ScoreContainer activities={userActivities}/>
@@ -28,7 +28,7 @@ export default function HistoryPage() {
 const MainWrapper = styled.main`
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(to bottom, #f8e6eb, #EB5B80, #ffffff);
+	background: linear-gradient(to bottom, #e7f4fc, #006fab, #ffffff);
 	display: flex;
 	flex-direction: column;
 	align-items: center;

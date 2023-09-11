@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import styled from 'styled-components';
 
-export default function EmptyPage({message}) {
+export default function EmptyPage({message, border}) {
 
   return (
-    <Container>
+    <Container border={border}>
       <span>{message}</span>
     </Container>
   );
@@ -16,8 +16,8 @@ const Container = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  border: 1px solid #443e3e;
+  margin-top: ${props => props.border ? "50px" : "0"};
+  border: ${props => props.border ? "1px solid #443e3e" : "none"};
   padding: 10px;
   border-radius: 20px;
 

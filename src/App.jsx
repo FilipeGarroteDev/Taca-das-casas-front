@@ -8,6 +8,9 @@ import ActivityCatalogPage from './pages/ActivityCatalogPage'
 import RegisterPage from './pages/RegisterPage'
 import HistoryPage from './pages/HistoryPage'
 import RankingPage from './pages/RankingPage'
+import AdminMainPage from './pages/Admin/AdminMainPage'
+import AdminRegisterPage from './pages/Admin/AdminRegisterPage'
+import ValidateActivityPage from './pages/Admin/ValidateActivityPage'
 
 function App() {
 
@@ -33,6 +36,9 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/ranking" element={<RankingPage />} />
+            <Route path="/admin" element={<AdminMainPage />} />
+            <Route path="/admin/registerActivity" element={<AdminRegisterPage />} />
+            <Route path="/admin/validateActivity" element={<ValidateActivityPage />} />
           </Routes>
         </BrowserRouter>
     </>

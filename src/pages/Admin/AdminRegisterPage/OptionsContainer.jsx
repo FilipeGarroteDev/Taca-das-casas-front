@@ -1,29 +1,22 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { FormControl, FormLabel, Radio, RadioGroup } from '@mui/joy';
 import styled from 'styled-components';
-import { activities, userActivities } from '../../../mock';
-import ActivitiesMenu from '../../components/ActivitiesMenu';
-import { useEffect, useState } from 'react';
+import { activities, userActivities } from '../../../../mock';
+import ActivitiesMenu from '../../../components/ActivitiesMenu';
+import { useState } from 'react';
 import DateInputComponent from './DateInputComponent';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import SelectVolunteerComponent from './SelectVolunteerComponent';
+
 
 export default function OptionsContainer() {
   const [selectedActivityGroup,setSelectedActivityGroup] = useState("Presença")
   const [activityData, setActivityData] = useState({});
-  const [selectedDate, setSelectedDate] = useState("");
   const user = JSON.parse(localStorage.getItem("user"))
   const navigate = useNavigate()
-  console.log(activityData)
-
-  const allFieldsFilled = activityData.activity && activityData.created_at
+  console.log(userActivities)
   
-  useEffect(() => {
-    setActivityData({
-      ...activityData,
-      created_at: selectedDate,
-    });
-  }, [selectedDate])
+  const allFieldsFilled = activityData.activity && activityData.created_at && activityData.volunteer
 
   function handleInput(e) {
     setActivityData({
@@ -36,14 +29,14 @@ export default function OptionsContainer() {
     userActivities.push({
       id: (Math.random()*100000).toFixed(0),
       userId: user.id,
-      volunteer: user.email,
+      volunteer: activityData.volunteer,
       activity: activityData.activity.split(" = ")[0],
       pts: Number(activityData.activity.split(" = ")[1].split(" ")[0]),
-      status: "pending",
+      status: "success",
       created_at: activityData.created_at
     })
     toast.success("Sua atividade foi registrada com sucesso! :)")
-    navigate("/")
+    navigate("/admin")
     console.log(userActivities)
   }
 
@@ -62,7 +55,7 @@ export default function OptionsContainer() {
                 value={`${activity} = ${pts} pts`}
                 label={`${activity} = ${pts} pts`} 
                 variant="outlined" 
-                color="danger"
+                color="danger" 
                 onChange={handleInput}
               />
             )
@@ -70,7 +63,8 @@ export default function OptionsContainer() {
         </RadioGroup>      
       </FormControl>
     </Container>
-    <DateInputComponent selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+    <DateInputComponent handleInput={handleInput}/>
+    <SelectVolunteerComponent handleInput={handleInput}/>
     <RegisterButton onClick={() => sendActivity()} disabled={!allFieldsFilled} isDisabled={!allFieldsFilled}>Registrar atividade</RegisterButton>
     </>
   );

@@ -29,7 +29,12 @@ export default function SigninPage() {
       if(!user || user.password !== signInData.password) throw new Error();
 
       localStorage.setItem("user", JSON.stringify(user))
-      navigate("/")
+      if(user.role === "admin"){ 
+        return navigate("/admin")
+      } else {
+        return navigate("/")
+      }
+      
     } catch (error) {
       toast.error('O e-mail ou senha estão incorretos. Por favor, verifique e tente de novo! :)');
     }

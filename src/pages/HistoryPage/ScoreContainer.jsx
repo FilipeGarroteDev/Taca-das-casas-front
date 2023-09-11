@@ -17,9 +17,9 @@ export default function ScoreContainer({activities}) {
 function ScoreLine({ activity }) {
 	const icon = () => {
 		switch(activity.status){
-			case "as":
-				return <BiSolidTimeFive color='#DAA520'/>;
 			case "pending":
+				return <BiSolidTimeFive color='#DAA520'/>;
+			case "success":
 				return <BsFillCheckCircleFill color='#228B22'/>;
 			default:
 				return <BsFillXCircleFill color='#b22222'/>
