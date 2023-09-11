@@ -11,7 +11,7 @@ export default function ActivityCatalogPage() {
 
 	return (
 		<MainWrapper>
-			<GreetingsHeader />
+			<GreetingsHeader color="#805592"/>
 			<ActivitiesMenu setSelectedActivityGroup={setSelectedActivityGroup} />
 			<section>
 				<ActivitiesContainer selectedActivityGroup={selectedActivityGroup} />

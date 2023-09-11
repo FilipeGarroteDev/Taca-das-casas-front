@@ -8,7 +8,7 @@ export default function RegisterPage() {
 
   return (
     <MainWrapper>
-      <GreetingsHeader/>
+      <GreetingsHeader color="#EB5B80"/>
         <OptionsContainer />
       <CreaStripePattern position="footer"/>
     </MainWrapper>

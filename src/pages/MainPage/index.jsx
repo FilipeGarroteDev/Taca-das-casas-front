@@ -20,7 +20,7 @@ export default function MainPage() {
 
   return (
     <MainWrapper>
-      <GreetingsHeader/>
+      <GreetingsHeader isHomePage color="#fcc325"/>
       <img src={housesImages[currentHouse]} alt='houseLogo' />
       <section>
         <div onClick={() => navigate("/register")}>Registrar atividade</div>

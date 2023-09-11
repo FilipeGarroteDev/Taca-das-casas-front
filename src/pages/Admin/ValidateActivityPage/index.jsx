@@ -17,7 +17,7 @@ export default function ValidateActivityPage() {
 
   return (
     <MainWrapper hasNewActivities={allPendingActivities.length > 0}>
-      <GreetingsHeader/>
+      <GreetingsHeader isAdmin color="#805592"/>
       <PendingActivitiesContainer activities={allPendingActivities} selectedActivities={selectedActivities} setSelectedActivities={setSelectedActivities}/>
       <ButtonArea selectedActivities={selectedActivities}/>
       <CreaStripePattern position="footer"/>

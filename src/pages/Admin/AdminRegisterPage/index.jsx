@@ -8,7 +8,7 @@ export default function AdminRegisterPage() {
 
   return (
     <MainWrapper>
-      <GreetingsHeader/>
+      <GreetingsHeader isAdmin color="#EB5B80"/>
         <OptionsContainer />
       <CreaStripePattern position="footer"/>
     </MainWrapper>

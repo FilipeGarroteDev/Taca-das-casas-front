@@ -1,7 +1,6 @@
 import CreaStripePattern from '../../components/CreaStripePattern';
 import styled from 'styled-components';
 import GreetingsHeader from '../../components/GreetingsHeader';
-import { Pagination } from "@mui/material"
 import { userActivities } from '../../../mock';
 import EmptyPage from '../../components/EmptyPage';
 import ScoreContainer from './ScoreContainer';
@@ -10,15 +9,12 @@ export default function HistoryPage() {
 
 	return (
 		<MainWrapper>
-			<GreetingsHeader />
+			<GreetingsHeader color="#006fab"/>
 			<h1>Quadro de Pontos</h1>		
 			{userActivities.length === 0 ? 
 				<EmptyPage border message="Você ainda não possui atividades registradas. Corre lá na seção de registro e ajude sua Casa!! :)" /> 
 				: 
-				<>
-					<ScoreContainer activities={userActivities}/>
-					<Pagination count={10} variant="outlined" color="secondary" />
-				</>		
+				<ScoreContainer activities={userActivities}/>
 			}
 			<CreaStripePattern position="footer" />
 		</MainWrapper>

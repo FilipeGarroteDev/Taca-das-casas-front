@@ -7,7 +7,7 @@ export default function RankingPage() {
 
 	return (
 		<MainWrapper>
-			<GreetingsHeader />
+			<GreetingsHeader color="#53938d"/>
 			<h1>Segue o Líder</h1>
 			<RankingContainer />
 			<CreaStripePattern position="footer" />

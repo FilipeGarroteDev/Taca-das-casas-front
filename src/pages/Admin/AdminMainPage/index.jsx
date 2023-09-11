@@ -27,7 +27,7 @@ export default function AdminMainPage() {
 
   return (
     <MainWrapper hasNewActivities={allPendingActivities.length > 0}>
-      <GreetingsHeader/>
+      <GreetingsHeader isHomePage color="#006fab"/>
       <FaCrown />
       <img src={housesImages[currentHouse]} alt='houseLogo' />
       <section>

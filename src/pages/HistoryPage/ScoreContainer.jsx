@@ -3,6 +3,7 @@
 import styled from 'styled-components';
 import { BsFillXCircleFill, BsFillCheckCircleFill } from "react-icons/bs"
 import { BiSolidTimeFive } from "react-icons/bi"
+import { Pagination } from '@mui/material';
 
 export default function ScoreContainer({activities}) {
 	
@@ -10,6 +11,9 @@ export default function ScoreContainer({activities}) {
 		<Container>
 			<ScoreLine/>
 			{activities.map((activity) => <ScoreLine key={activity.id} activity={activity}/>)}
+			<div>
+				<Pagination count={10} variant="outlined" color="primary" size='small'/>
+			</div>
 		</Container>
 	);
 }
@@ -32,7 +36,7 @@ function ScoreLine({ activity }) {
 		<Line isHeader={isHeader}>
 			<p>{isHeader ? "Atividade" : activity.activity}</p>
 			<strong>{isHeader ? "Pts" : activity.pts}</strong>
-			<span>{isHeader ? "Data" : activity.created_at}</span>
+			<span>{isHeader ? "Data" : activity.created_at.split("/").slice(0,2).join("/")}</span>
 			<h6>{isHeader ? "Status" : icon()}</h6>
 		</Line>
 	);
@@ -42,11 +46,25 @@ const Container = styled.main`
 	width: 95vw;
 	height: 70vh;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	border-radius: 20px;
   overflow: hidden;
   margin-top: 30px;
-	margin-right: 10px;
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: #ffffff;
+	position: relative;
+
+	>div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+	}
 `;
 
 const Line = styled.section`
@@ -71,7 +89,7 @@ const Line = styled.section`
 	}
 
 	>strong{
-		width: 10%;
+		width: 20%;
 		font-weight: 300;
 		display: flex;
 		justify-content: center;
@@ -80,7 +98,7 @@ const Line = styled.section`
 	}
 
 	>span{
-		width: 30%;
+		width: 20%;
 		font-weight: 300;
 		display: flex;
 		justify-content: center;
